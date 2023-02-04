@@ -1,0 +1,61 @@
+
+.question-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow:  0 0 7px 0px var(--primary-dark);
+
+    &.full {
+        font-size: 1.5em;
+    }
+
+    .title {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .body {
+        margin-top: 20px;
+        font-size: 1.2em;
+        min-height: 50px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 1.5em;
+
+        .vote {
+            display: flex;
+
+            .option {
+                color: white;
+            }
+            .upvote.voted {
+                color: var(--primary);
+            }
+            .downvote.voted {
+                color: red;
+            }
+            .diff {
+                width: 20px;
+                text-align: center;
+            }
+            > div {
+                cursor: pointer;
+            }
+            > p {
+                margin: 0 15px;
+            }
+        }
+
+        > div {
+            display: flex;
+        }
+    }
+}

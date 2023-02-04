@@ -1,0 +1,90 @@
+
+.auth-modal {
+    background: var(--primary) !important;
+    border-radius: 12px;
+
+    .fa-times {
+        font-size: 2em;
+        color: white;
+    }
+
+    .auth {
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        margin-top: 20px;
+        .title {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        form {
+            width: 70%;
+            p {
+                font-size: 1.2em;
+                margin: 20px 0 8px 0;
+                color: var(--secondary);
+            }
+
+            input[type=submit] {
+                margin: 40px 0 0 0;
+            }
+        }
+        .sub {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    // max-width: var(--extra-large);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    padding: 20px;
+    font-family: 'Anton', sans-serif;
+    // box-shadow: 0 0 2px 1px black;
+
+    // a {
+    //     text-transform: capitalize;
+    // }
+
+    .content {
+        width: var(--extra-large);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            color: var(--secondary) !important;
+            margin: 0 10px;
+        }        
+
+        .logo {
+            font-size: 1.5em;
+            color: var(--secondary);
+            // margin-right: 50px;
+        }
+
+        
+        .logged, .notlogged {
+            display: flex;
+            
+            > * {
+                margin: 0 5px;
+            }
+        }
+
+        .logged {
+
+            a {
+                font-size: 1.5em;
+                margin-right: 20px;
+            }
+        }
+    }
+}

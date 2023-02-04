@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "cc07766e-2039-41d4-bf1f-d89735e95ff2",
+		"name": "RuntimeError",
+		"description": "Proiect Modelare Sisteme Software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19732093"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"cristi\",\r\n    \"password\": \"parolacristi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/login",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test1\",\r\n    \"password\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/register",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test JWT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDY2Njg0fQ.3hA11ueptVW0RvXc1sV8GEEcwx7m8ZOMXm1QKhE5l1I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/test",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg2Mzg4fQ.BS8ZlDWVSCMlPXRNnObuCS3lhJ6JDDi8nm87mZ0b7fc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/questions/getAll",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "Accept",
+									"value": "*/*",
+									"disabled": true
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br",
+									"disabled": true
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"disabled": true
+								},
+								{
+									"key": "auth-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDY2Njg0fQ.3hA11ueptVW0RvXc1sV8GEEcwx7m8ZOMXm1QKhE5l1I",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAQuestion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg2NDc2fQ.N4DbBtxu-hA4RB_l5FyOPN9UoDyv9qBJKrwt1xH3quQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"submitter_id\": \"SubmitterId1\",\n    \"title\": \"title1\",\n    \"contents\": \"contents2\",\n    \"replies\": [],\n    \"best_answer_id\": \"\",\n    \"upvoters\": [],\n    \"downvoters\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/questions/create",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditContent",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"63aeccd7a13b0e3ee26a2e39\",\n    \"submitter_id\": \"SubmitterId1\",\n    \"title\": \"title1\",\n    \"contents\": \"Hello there\",\n    \"replies\": [],\n    \"best_answer_id\": \"\",\n    \"upvoters\": [],\n    \"downvoters\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/questions/editContent",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"editContent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAnswerToQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"submitter_id\": \"SubmitterId2\",\n    \"contents\": \"contents_answer2\",\n    \"replies\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/questions/addAnswerToQuestion?id=63aeccd7a13b0e3ee26a2e39",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"addAnswerToQuestion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63aeccd7a13b0e3ee26a2e39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddReplyToAnswer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"submitter_id\": \"SubmitterId3\",\n    \"contents\": \"contents_reply3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/questions/addReplyToAnswer?id=63aeccd7a13b0e3ee26a2e39&answer=63aee219425dbd79b8884981",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"addReplyToAnswer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63aeccd7a13b0e3ee26a2e39"
+								},
+								{
+									"key": "answer",
+									"value": "63aee219425dbd79b8884981"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FavoriteComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/questions/favoriteComment?id=63aeccd7a13b0e3ee26a2e39&answer=63aee219425dbd79b8884981",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"favoriteComment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63aeccd7a13b0e3ee26a2e39"
+								},
+								{
+									"key": "answer",
+									"value": "63aee219425dbd79b8884981"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DownvoteQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/questions/downvoteQuestion?id=63aeccd7a13b0e3ee26a2e39&downvotter=5",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"downvoteQuestion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63aeccd7a13b0e3ee26a2e39"
+								},
+								{
+									"key": "downvotter",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpvoteQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjM5MGZmZTRmNDRlMmJhOGRlMzE2MDVlIiwiZXhwIjoxNjcyNDg4NDA3fQ.Pc0_faOPMmlid5auRycPFZPMGA49GuV55zLnQGo5pwc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{host}}/api/questions/upvoteQuestion?id=63aeccd7a13b0e3ee26a2e39&upvotter=2",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"upvoteQuestion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63aeccd7a13b0e3ee26a2e39"
+								},
+								{
+									"key": "upvotter",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

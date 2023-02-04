@@ -1,0 +1,39 @@
+$sizes: (
+    --small: 576px,
+    --medium: 768px,
+    --large: 992px,
+    --extra-large: 1200px,
+);
+
+
+$theme-map-dark: (
+    --primary: #43D474,
+    --primary-light: #6ddd92,
+    --primary-lighter: #9bebb5,
+    --primary-superlight: #9bebb5,
+    --primary-superdark: #309652,
+    --primary-dark: #39af60,
+    --primary-darker: #33c263,
+    --secondary: #132922,
+    --bg: #282828,
+    --bg-light: #2e2e2e,
+    --bg-llight: #3d3d3d,
+);
+
+$theme-map-light: (
+    --primary: #22007C,
+    --primary-light: #0D00A4,
+    --primary-superdark: #04052E,
+    --primary-dark: #140152,
+    --secondary: #F8F7FF,
+    --bg: hsl(0, 0%, 95%),
+    --bg-light: hsl(0, 0%, 90%),
+    --bg-llight: hsl(0, 0%, 98%),
+    --bg-dark: hsl(0, 0%, 90%),
+);
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value;
+    }
+}

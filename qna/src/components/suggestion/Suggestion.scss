@@ -1,0 +1,61 @@
+.suggestion-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .info {
+        font-size: 2.5em;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        display: flex;
+        
+        
+        > div {
+            height: fit-content;
+            width: 50%;
+            font-size: 1.5em;
+            border: 2px solid var(--primary);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow:  0 0 7px 0px var(--primary-dark);
+        }
+    }
+
+    .actions {
+        display: flex;
+        margin-top: 30px;
+        
+        button {
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 12px 0;
+            font-size: 1.4em;
+            border-radius: 50px;
+            top: 0px;
+            transition: box-shadow 0.2s, top 0.2s;
+    
+            &:hover {
+                box-shadow: 0 0 6px var(--primary-light);
+            }
+            &:active {
+                box-shadow: 0 0 15px var(--primary-light);
+                top: 1px;
+            }
+
+            &.reject {
+                border: 1px solid var(--primary);
+                background: unset;
+                color: var(--primary);
+            }
+        }
+    }
+}

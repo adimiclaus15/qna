@@ -1,0 +1,74 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+
+    .user-data {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            width: 50%;
+            flex-grow: 2;
+
+            .pfp {
+                width: 20%;
+                height: fit-content;
+                border-radius: 10%;
+            }
+
+            .sep {
+                margin: 0 0 0 15px;
+                font-size: 2em;
+            }
+        }
+        
+
+        .medal {
+            width: 15%;
+            height: fit-content;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .suggestions {
+        display: flex;
+        justify-content: space-between;
+
+        > * {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            height: fit-content;
+            box-shadow:  0 0 7px 0px var(--primary-dark);
+
+            .suggestion-card {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid var(--primary);
+                align-items: center;
+                width: 100%;
+                margin: 10px;
+                border-radius: 3px;
+
+                .title, .status, a {
+                    font-size: 1.5em;
+                    margin: 5px 0;
+                }
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
